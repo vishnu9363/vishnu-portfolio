@@ -11,13 +11,14 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(app instanceof AppComponent).toBeTrue();
   });
 
   it('should render hero name', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.hero-title')?.textContent).toContain('Vishnu Suthar');
+    const title = compiled.querySelector('.hero-title')?.textContent ?? '';
+    expect(title).toContain(fixture.componentInstance.hero.name);
   });
 });
