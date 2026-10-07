@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   theme: Theme = 'light';
 
   readonly hero = {
-    name: 'Vishnu',
+    name: 'Vishnu Suthar',
     role: 'Full Stack .NET Developer',
     phone: '+91-9700002922',
     email: 'vishnusuthar792@gmail.com',
